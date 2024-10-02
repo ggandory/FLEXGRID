@@ -48,7 +48,6 @@
   border-radius: 0.3em;
   font-size: 1rem;
   background: gold;
-  cursor: pointer;
 }
 
 /* bullet list */
@@ -119,7 +118,6 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
-  cursor: pointer;
 }
 .card-image {
   height: 0;

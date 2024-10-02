@@ -136,6 +136,24 @@
   flex: 1 1 auto;
   padding: 1em;
   background: white;
+  cursor: default; /* 기본 커서 적용 */
+}
+
+.card-desc:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 1em; /* padding과 동일한 크기 */
+  background: transparent;
+  pointer-events: none; /* 클릭 및 커서 이벤트 차단 */
+  cursor: default; /* 커서를 기본값으로 */
+  z-index: 1; /* :before 요소가 패딩 부분에만 커서와 이벤트 차단 적용 */
+}
+.card-desc p {
+  z-index: 2; /* 내용 부분은 여전히 클릭과 커서 이벤트 적용 가능 */
 }
 
 @media (min-width: 600px) {
