@@ -8,16 +8,14 @@
 	<title>CSS Grid</title>
 	<link rel="stylesheet" href="default.css">
 	<style>
-		/* gap */
+		/* auto-fill, auto-fit */
 		.grid-container {
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: repeat(3, minmax(200px, auto));
-			/* row-gap: 20px; 가로줄*/
-			/* column-gap: 20px; 세로줄*/
-			/* grid-gap: 20px; 예전 버전 */
-			gap: 20px;
+			grid-template-columns: repeat(auto-fit, minmax(200px, auto));
 		}
+
+		/*여기서 auto-fill로 처리하면 최소길이가 200px로 처리되면서 창이 커지면 따로 빈칸으로 200px만큼 채워지는데 
+	만약 auto-fit으로 처리되면 최소 200px에 창이 늘어나는 만큼 너비 자체가 계속 늘어난다.(빈칸이 채워지는게 아님)*/
 	</style>
 </head>
 

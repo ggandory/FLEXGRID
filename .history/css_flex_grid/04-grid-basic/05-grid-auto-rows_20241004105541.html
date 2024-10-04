@@ -8,32 +8,13 @@
 	<title>CSS Grid</title>
 	<link rel="stylesheet" href="default.css">
 	<style>
-		/* grid-column, grid-row */
+		/* grid-auto-columns, grid-auto-rows */
 		.grid-container {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(3, minmax(100px, auto));
 			grid-auto-rows: minmax(100px, auto);
 			gap: 1rem;
-		}
-
-		.grid-item:nth-child(1) {
-			grid-column-start: 1;
-			grid-column-end: 3;
-			grid-row-start: 1;
-			grid-row-end: 4;
-		}
-
-		.grid-item:nth-child(3) {
-			grid-column: 3;
-			grid-row: 2;
-		}
-
-		.grid-item:nth-child(4) {
-			grid-column: 3;
-			/* grid-row: 3 / 5; */
-			grid-row: 2 / span 3;
-			/*점유하는 칸수 3개 즉 2 / 5랑 같음*/
-			opacity: 0.8;
 		}
 	</style>
 </head>

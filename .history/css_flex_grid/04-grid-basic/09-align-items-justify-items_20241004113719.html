@@ -8,15 +8,19 @@
 	<title>CSS Grid</title>
 	<link rel="stylesheet" href="default.css">
 	<style>
-		/* gap */
 		.grid-container {
 			display: grid;
+			/* grid-template-columns: 100px 300px 200px; */
+			/* fr: fraction */
+			/* grid-template-columns: 1fr 2fr 1fr; */
+			/* grid-template-columns: 1fr 500px 1fr; */
+			/* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
 			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: repeat(3, minmax(200px, auto));
-			/* row-gap: 20px; 가로줄*/
-			/* column-gap: 20px; 세로줄*/
-			/* grid-gap: 20px; 예전 버전 */
-			gap: 20px;
+			/* grid-template-columns: repeat(3, 1fr 2fr 1fr); */
+			/* grid-template-rows: 200px 200px auto; */
+			/* grid-template-rows: repeat(2, 1fr); */
+			height: 80vh;
+			align-items: stretch;
 		}
 	</style>
 </head>

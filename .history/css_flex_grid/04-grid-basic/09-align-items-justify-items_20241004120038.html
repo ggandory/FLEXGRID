@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CSS Grid</title>
+	<link rel="stylesheet" href="default.css">
+	<style>
+		.grid-container {
+			display: grid;
+			/* grid-template-columns: 100px 300px 200px; */
+			/* fr: fraction */
+			/* grid-template-columns: 1fr 2fr 1fr; */
+			/* grid-template-columns: 1fr 500px 1fr; */
+			/* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+			grid-template-columns: repeat(3, 1fr);
+			/* grid-template-columns: repeat(3, 1fr 2fr 1fr); */
+			/* grid-template-rows: 200px 200px auto; */
+			/* grid-template-rows: repeat(2, 1fr); */
+			height: 80vh;
+			align-items: stretch;
+			/*start, center, end*/
+			/*justify-items: stretch, start, center, end */
+			/*place-items는 place-items: center start; 이런식으로 align-items와 justify-items를 같이 쓸수 있는 단축 속성임*/
+			/*align-content 아이템 그룹 세로 정렬
+			grid 아이템들의 높이를 모두 합한 갑시 grid 컨테이너의 높이보다 작을 때 grid 아이템들을 통째로 정렬합니다.
+			stretch, start, center, end, space-between, space-around, space-evenly
+			*/
+			/*justify-content 아이템 그룹 세로 정렬
+			grid 아이템들의 너비를 모두 합한 갑시 grid 컨테이너의  너비보다 작을 때 grid 아이템들을 통째로 정렬합니다.
+			stretch, start, center, end, space-between, space-around, space-evenly
+			*/
+			/*place-content
+			align, justify-content둘다 쓰는거
+			place-content: space-between center; 이렇게 하면
+			align에는 space-between 
+			justify에는 center임*/
+			/*align-self 해당 아이템을 세로 방향으로 정렬합니다.
+			아이템에 적용합니다.*/
+		}
+	</style>
+</head>
+
+<body>
+	<div class="grid-container">
+		<div class="grid-item">A</div>
+		<div class="grid-item">B</div>
+		<div class="grid-item">C</div>
+		<div class="grid-item">D</div>
+		<div class="grid-item">E</div>
+		<div class="grid-item">F</div>
+		<div class="grid-item">G</div>
+		<div class="grid-item">H</div>
+		<div class="grid-item">I</div>
+	</div>
+</body>
+
+</html>
